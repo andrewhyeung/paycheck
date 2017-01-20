@@ -7,16 +7,12 @@ body{
 }
 header {
 	padding: .5%;
+	text-align: center;
 }
-	header h1{
-		text-align: center;
-	}
-	header h2 {
-		text-align: center;
-	}
-	header h4 {
-		text-align: center;
-	}
+select {
+	border: 1px solid #1a1a00;
+}
+
 #product{
 	text-align: center; 
 	display: block;
@@ -32,8 +28,8 @@ header {
 button {
 	background-color: white;
 	border-radius: 3px;
-	border: 3px solid #1a1a00;
-	font-size: 30px;
+	border: 1px solid #1a1a00;
+
 	margin: 1%;
 }
 

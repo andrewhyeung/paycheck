@@ -13,6 +13,7 @@ class SalaryInput extends Component {
 		return (
 			<div>
 				<form>
+					<p>You make {this.props.amount}</p>
 					Hourly Rate:  
 					<input 
 						value={this.state.term}
@@ -20,6 +21,15 @@ class SalaryInput extends Component {
 					/>
 					Salary:
 					<input />
+					Number of allowances: 
+					<input type='number' /> 
+					Pay Frequency: 
+					<select>
+						<option>Weekly</option>
+						<option>Bi-weekly</option>  
+						<option>Bi-monthly</option>
+						<option>Monthly</option>  
+					</select>
 					<button>Submit</button>
 				</form>
 				

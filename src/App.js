@@ -11,7 +11,7 @@ class App extends Component {
           <h1>Paycheck Calculator</h1>
           <hr />  
         </header>
-        <SalaryInput />
+        <SalaryInput amount='50,000' />
       </div>
     );
   }
