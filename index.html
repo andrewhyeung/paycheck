@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="./style.css"></link>
+        <title>Paycheck Calculator</title>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+    </head>
+    <body>
+        <noscript>
+        You need to enable JavaScript to run this app.
+        </noscript>
+        <header>
+            <div class="colorOverlay">
+                <div class='test'>
+                    <logo>PC</logo> 
+                    <div class="name">Paycheck Calculator</div>
+                </div>
+                
+            </div>
+        </header>
+        <hr>
+        <div class="description">Simple application to determine how much your next paycheck will be minus the  taxes. Just enter the following information below and see how much you'll get on your next paycheck</div>
+        <div class="form">
+            <div class="trigger">
+                <input type="radio" id="payType1" name="payType" value="hourly" onClick="hourly()" checked>
+                <label for="payType1">Hourly</label>
+                <input type="radio" id="payType2" name="payType" onClick="salary()" value="salary">
+                <label for="payType2">Salary</label>
+            </div>
+            <div>
+                <form id="form1">
+                    <div>
+                            <input type="radio" id="maritalStatus1"
+                            name="maritalStatus" value="single" checked>
+                            <label for="maritalStatus1">Single</label>
+                            <input type="radio" id="maritalStatus2"
+                            name="maritalStatus" value="married">
+                            <label for="maritalStatus2">Married</label>
+                    </div>
+                    <div>
+                        Pay Frequency
+                        <select id="payFrequency">
+                            <option value="weekly">Weekly</option>
+                            <option value="bi">Bi-Weekly</option>
+                            <option value="monthly">Monthly</option>
+                        </select>
+                    </div>
+                    <table>
+                        <tr>
+                            <td><span class="currencyInput"><input id="rate" type="number" step="0.01" min="0.01" placeholder="Hourly Rate"></input></span></td>
+                            <td><span class="normalInput"><input id="hoursWorked" type="number" min="0"placeholder="Hours worked in pay period"></input></span></td>
+                        </tr>
+                        <tr>
+                            <td><span class="currencyInput"><input id="overtimeRate" type="number" placeholder="Overtime Rate"></input></span></td>
+                            <td>
+                                <span class="normalInput"><input id="overtimeHoursWorked" type="number" placeholder="Overtime worked in pay period"></input></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span class="currencyInput"><input id="tips" type="number" placeholder="Tips"></input></span>
+                            </td>
+                            <td>
+                                <span class="normalInput"><input id="allowances" type="number" placeholder="Number of allowances"></input></span>
+                            </td>
+                        </tr>
+                    </table>
+                    <input class="submit" type="submit" value="Submit"/>
+                </form>
+            </div>
+        </div>
+        <div class="results">
+            <div id="pieChart">
+            </div>
+            <div class="loader hidden"></div>
+            <table class="table hidden">
+                <tr>
+                    <td>Total Paycheck</td>
+                    <td id="totalPay"></td>
+                </tr>
+                <tr>
+                    <td>Federal Income Tax</td>
+                    <td id="federalIncomeTax"></td>
+                </tr>
+                <tr>
+                    <td>Social Security</td>
+                    <td id="socialSecurityTax"></td>
+                </tr>
+                <tr>
+                    <td>Medicare</td>   
+                    <td id="medicareTax"></td>
+                </tr>
+                <tr>
+                    <td>Take Home Pay</td>
+                    <td id="takeHome"></td>
+                </tr>
+                
+            </table>
+        </div>
+    </body>
+    <script src="calculations.js"></script>
+</html>
