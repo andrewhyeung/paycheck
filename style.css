@@ -38,6 +38,10 @@ header{
     transition: visibility 0s 2s, opacity 1s linear;
     opacity: 0;
 }
+.quickHide{
+    visibility: hidden;
+    opacity: 0;
+}
 .visible{
     visibility: visible;
     transition: visibility 2s 0s, opacity 1s linear;
@@ -83,7 +87,7 @@ header{
     display: block;
     border: 1px inset #ccc;
     border-radius: 3px;
-    width: 150px;
+    width: 180px;
 }
 .currencyInput::before{
     content: "$";
@@ -92,12 +96,13 @@ header{
 .normalInput{
     display: block;
     border: 1px inset #ccc;
-    border-radius: 3px;
-    width: 150px;
+    border-radius: 2px;
+    width: 180px;
 }
-/* .normalInput input{
-    width:132.9px;
-} */
+
+.formInput{
+    width: 90%; 
+}
 input{
     border: none;
     text-align: left;
@@ -110,6 +115,7 @@ input:focus{
 }
 .submit{
     border: 1px solid #ccc;
+    width: 53.36px;
 }
 .results{
     display: flex; 
