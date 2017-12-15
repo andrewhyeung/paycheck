@@ -126,9 +126,35 @@ input:focus{
 }
 
 .circle{
-    
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    margin-right: 10px;
+    margin-top: 3px;
+    margin-bottom: -3px;
 }
 
+.small{
+    width: 13px;
+    height: 13px;
+}
+/* colors for table */
+.light-blue{
+    background: #98abc5;
+}
+.light-purple{
+    background: #8a89a6;
+}
+.medium-purple{
+    background: #7b6888;
+}
+.purple{
+    background: #6b486b;
+}
+.sand{
+    background: #a05d56;
+}
 @media only screen and (max-width: 825px) {
     .results{
         display: block;
