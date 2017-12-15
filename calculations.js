@@ -20,7 +20,6 @@ function federalWitholding(bracket, witholdings,weeklyPay, allowances){
             return ((subjectedWitholding - bracket[x]) * percentage[x]) + witholdings[x]; 
         }
         else if(subjectedWitholding > bracket[bracket.length-1]){
-            console.log('weeklyPay is greater than the tax Bracket '); 
             return ((subjectedWitholding - bracket[bracket.length-1]) * percentage[percentage.length-1]) + witholdings[bracket.length-1];
         }
         x++
@@ -46,14 +45,12 @@ function californiaWitholding(bracket, addOn, weeklyPay, allowances, maritalStat
     let x = 0;
     while(weeklyPay > bracket[x]){
         if(weeklyPay < bracket[x+1]){
-            console.log('weeklyPay-bracket[x] * percentage[x] +addOn[x]',(((weeklyPay - bracket[x]) * percentage[x]) + addOn[x]))
             let test = (((weeklyPay - bracket[x]) * percentage[x]) + addOn[x] - exemptionBracket[allowances])
-            console.log('typeof test', typeof test);
             if(allowances === ''){
                 return ((((weeklyPay - bracket[x]) * percentage[x]) + addOn[x])-exemptionBracket[0]);
             }
             else{
-                return ((((weeklyPay - bracket[x]) * percentage[x]) + addOn[x])-exemptionBracket[allowances]);
+                return test;
             }
             
         }
@@ -194,10 +191,11 @@ document.getElementById('form1').addEventListener('submit', function(e){
             {"label": "California Witholdings", "value": calWitheld},
             {"label":"Social Security Tax", "value": totalPay * .062}, 
             {"label":"Medicare Tax", "value": totalPay * .0145}, 
+            
         ]
         var color = d3.scaleOrdinal(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56"]);
-        var width = 250,
-        height = 250,
+        var width = 300,
+        height = 300,
         radius = Math.min(width, height) / 2;
 
         var arc = d3.arc()
