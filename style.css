@@ -155,9 +155,25 @@ input:focus{
 .sand{
     background: #a05d56;
 }
+@media all and (max-width:500px){
+    table{
+        width:100%;
+    }
+
+    td{
+        display:block;
+        width:100%;
+    }
+
+    tr{
+        display:block;
+    }
+}
 @media only screen and (max-width: 825px) {
     .results{
         display: block;
     }
 }
+
+
 
