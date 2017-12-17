@@ -86,7 +86,7 @@ header{
 
 .currencyInput{
     display: block;
-    border: 1px inset #ccc;
+    border: 1px solid #ccc;
     border-radius: 3px;
     width: 180px;
 }
@@ -96,7 +96,7 @@ header{
 }
 .normalInput{
     display: block;
-    border: 1px inset #ccc;
+    border: 1px solid #ccc;
     border-radius: 2px;
     width: 180px;
 }
