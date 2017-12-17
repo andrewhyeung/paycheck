@@ -157,12 +157,12 @@ input:focus{
 }
 @media all and (max-width:500px){
     table{
-        width:100%;
+        width:98%;
     }
 
     td{
         display:block;
-        width:100%;
+        width:98%;
     }
 
     tr{
