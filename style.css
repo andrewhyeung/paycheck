@@ -156,16 +156,16 @@ input:focus{
     background: #a05d56;
 }
 @media all and (max-width:500px){
-    table{
-        width:98%;
+    .form1{
+        width:100%;
     }
 
-    td{
+    .form1 td{
         display:block;
-        width:98%;
+        width:100%;
     }
 
-    tr{
+    .form1 tr{
         display:block;
     }
 }
