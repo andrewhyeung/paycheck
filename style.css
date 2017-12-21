@@ -106,7 +106,6 @@ header{
 }
 input{
     border: none;
-    text-align: left;
     height: 20px;
     font-size: 12px;
     vertical-align: top;
@@ -116,7 +115,6 @@ input:focus{
 }
 .submit{
     border: 1px solid #ccc;
-    width: 53.36px;
 }
 .results{
     margin-top: 3%;
