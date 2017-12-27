@@ -31,7 +31,6 @@ header{
 .description{
     padding: 7% 5% 2% 5%;
     width: 50%;
-    text-align: left;
     margin: 0 auto; 
 }
 .hidden{
@@ -48,16 +47,8 @@ header{
     transition: visibility 2s 0s, opacity 1s linear;
     opacity: 1;
 }
-
-.table{
-    border: 1px solid black;
-    text-align: left;
-}
 .form1, table, td{
     padding: 10px;
-}
-.table td{
-    text-align: left;
 }
 .loader{
     margin-top: 3%;
@@ -103,6 +94,7 @@ header{
 
 .formInput{
     width: 90%; 
+    text-align: left;
 }
 input{
     border: none;
@@ -170,7 +162,7 @@ input:focus{
         padding: 20%;
     }
     .formInput{
-        width: 80%; 
+        width: 88%; 
         z-index: -1;
     }
 }
