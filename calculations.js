@@ -207,7 +207,7 @@ document.getElementById('form1').addEventListener('submit', function(e){
             .value(function (d) {
             return d.value;
         });
-        var svg = d3.select(".results").append("svg")
+        var svg = d3.select(".results").insert("svg",":first-child")
             .classed("svg-container visible", true)
             .attr("width", width)
             .attr("height", height)
