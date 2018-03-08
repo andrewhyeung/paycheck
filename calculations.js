@@ -63,6 +63,7 @@ function californiaWitholding(bracket, addOn, weeklyPay, allowances, maritalStat
 }
 // EVENT LISTENER FOR FORM SUBMISSION
 document.getElementById('form1').addEventListener('submit', function(e){
+    document.getElementsByClassName('loader')[0].style.display = "block"    
     //REMOVE ELEMENTS FROM THE DOM
     d3.select(".svg-container").remove();
     document.getElementsByClassName('table')[0].className = "table quickHide"  
@@ -224,7 +225,6 @@ document.getElementById('form1').addEventListener('submit', function(e){
             .style("fill", function (d) {
             return color(d.data.label);
         });
-
         // g.append("text")
         //     .attr("transform", function (d) {
         //     return "translate(" + arc.centroid(d) + ")";

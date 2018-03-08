@@ -34,7 +34,8 @@ header{
     margin: 0 auto; 
 }
 .hidden{
-    visibility: hidden;
+    display: none;
+    /* visibility: hidden; */
     transition: visibility 0s 2s, opacity 1s linear;
     opacity: 0;
 }
